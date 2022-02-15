@@ -3,7 +3,8 @@ import React from 'react'
 import ProductItem from './ProductItem'
 
 const ProductList = ({products}) => {
-    const productList = products.map(product => <ProductItem key={product._id} product = {product}/>)
+    const productList = products.map(product =>
+         <ProductItem key={product._id} product = {product}/>)
   return (
     <View>
        <Text>Products</Text>

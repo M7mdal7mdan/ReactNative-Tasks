@@ -27,7 +27,7 @@ const ShopDetail = () => {
       <Text style={{
         title:{color:"#000",fontSize:38,textAlign:"center"}}}>
             {shop.name}</Text>
-            <Image source={{uri: baseURL + shop.image}} style={{
+            <Image source={{uri: shop.image}} style={{
          height:"250px",
          width:"250px"}}/>
          {types}
