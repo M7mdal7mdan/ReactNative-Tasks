@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Button, NativeBaseProvider, Box } from "native-base";
+import { Button } from "native-base";
 
 const index = ({ navigation }) => {
   return (

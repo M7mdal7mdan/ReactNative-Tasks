@@ -4,7 +4,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../Home/Home";
 import ShopList from "../Shop/ShopList";
 import ShopDetail from "../Shop/ShopDetail";
-import CartIcon from "../Cart/CartIcon";
+import Cart from "../Buttons/Cart";
+import CartList from "../Cart/CartList";
 
 const StackNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
@@ -16,18 +17,23 @@ const StackNavigator = () => {
         component={Home}
         options={{
           // headerShown: false,
-          headerRight: () => <CartIcon />,
+          headerRight: () => <Cart />,
         }}
       />
-      <Screen name="Shops" component={ShopList} />
+      <Screen
+        name="Shops"
+        component={ShopList}
+        options={{ headerTitle: "All Shops", headerRight: () => <Cart /> }}
+      />
       <Screen
         name="ShopDetail"
         component={ShopDetail}
         options={({ route }) => ({
           title: route.params.shop.name,
-          headerRight: () => <CartIcon />,
+          headerRight: () => <Cart />,
         })}
       />
+      <Screen name="Cart" component={CartList} />
     </Navigator>
   );
 };

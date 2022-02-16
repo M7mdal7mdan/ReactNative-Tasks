@@ -1,8 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React from "react";
 import { HStack } from "native-base";
-import { observer } from "mobx-react";
-import { baseURL } from "../../stores/api";
 
 const ShopItem = ({ navigation, shop }) => {
   console.log("🚀 ~ file: ShopItem.js ~ line 6 ~ ShopItem ~ shop", shop.image);
@@ -12,7 +10,7 @@ const ShopItem = ({ navigation, shop }) => {
     >
       <HStack w="100%" justifyContent="space-between" alignItems="center">
         <Image
-          source={{ uri: baseURL + shop.image }}
+          source={{ uri: shop.image }}
           style={{
             height: "250px",
             width: "250px",
