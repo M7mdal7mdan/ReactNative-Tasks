@@ -4,13 +4,7 @@ class CartStore {
   constructor() {
     makeAutoObservable(this);
   }
-  addItemToCart = (newItem) => {
-    const foundItem = this.items.find(
-      (item) => item.product._id === newItem.product._id
-    );
-    if (foundItem) foundItem.quantity = newItem.quantity;
-    else this.items.push(newItem);
-  };
+
   items = [
     {
       product: {
@@ -33,6 +27,13 @@ class CartStore {
       quantity: 3,
     },
   ];
+  addItemToCart = (newItem) => {
+    const foundItem = this.items.find(
+      (item) => item.product._id === newItem.product._id
+    );
+    if (foundItem) foundItem.quantity = newItem.quantity;
+    else this.items.push(newItem);
+  };
 }
 const cartStore = new CartStore();
 export default cartStore;
