@@ -7,7 +7,7 @@ import { observer } from "mobx-react";
 
 const CartIcon = () => {
   const navigation = useNavigation();
-  const total = 0;
+  let total = 0;
   cartStore.items.forEach((item) => (total = total + item.quantity));
   return (
     <>

@@ -6,6 +6,8 @@ import ShopList from "../Shop/ShopList";
 import ShopDetail from "../Shop/ShopDetail";
 import Cart from "../Buttons/Cart";
 import CartList from "../Cart/CartList";
+import Signin from "../Auth/Signin";
+import Signup from "../Auth/Signup";
 
 const StackNavigator = () => {
   const { Navigator, Screen } = createStackNavigator();
@@ -34,6 +36,8 @@ const StackNavigator = () => {
         })}
       />
       <Screen name="Cart" component={CartList} />
+      <Screen name="Signin" component={Signin} />
+      <Screen name="Signup" component={Signup} />
     </Navigator>
   );
 };
